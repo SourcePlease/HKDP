@@ -1,0 +1,35 @@
+{
+  "name": "HerokuDeployer",
+  "description": "",
+  "keywords": [
+    "telegram"
+  ],
+  "success_url": "https://github.com/SourcePlease/HKDP",
+  "website": "https://github.com/SourcePlease/HKDP",
+  "repository": "https://github.com/SourcePlease/HKDP",
+  "env": {
+    "CONFIG_FILE_URL": {
+      "description": "Gist Url",
+      "value": "",
+      "required": false
+    },
+    "REPO_URL": {
+      "description": "Github Url",
+      "value": "",
+      "required": false
+    }
+  },
+  "addons": [
+  ],
+  "buildpacks": [{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  }
+}
